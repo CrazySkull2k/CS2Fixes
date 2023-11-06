@@ -223,33 +223,29 @@ void FASTCALL Detour_UTIL_SayText2Filter(
         }
         else if (pPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM4)) // r
         {
-            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\7VETERAN\1]\10 %s: \4%s", param1, param2);
+            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\7YOUTUBER\1]\10 %s: \4%s", param1, param2);
         }
 		else if (pPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM7)) // u
         {
-            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\11TESTER\1]\10 %s: \4%s", param1, param2);
-        }
-		else if (pPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM5)) // s
-        {
-            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\7MANAGER\1]\10 %s: \4%s", param1, param2);
+            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\7TESTER\1]\10 %s: \4%s", param1, param2);
         }
         else if (pPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM8)) // v
         {
-            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\20SUPERVIZOR\1]\10 %s: \4%s", param1, param2);
+            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\7DEVELOPER\1]\10 %s: \4%s", param1, param2);
         }
         else if (pPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM6)) // t
         {
-            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\2CO-OWNER\1]\14 %s: \4%s", param1, param2);
+            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\2CO-FONDATOR\1]\14 %s: \4%s", param1, param2);
         }
         else if (pPlayer->IsAdminFlagSet(ADMFLAG_CHEATS))
         {
-            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\2OWNER\1]\14 %s: \2%s", param1, param2);
+            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\2FONDATOR\1]\14 %s: \2%s", param1, param2);
         }
         else {
-            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\4Player\1]\1 %s: \1%s", param1, param2);
+            V_snprintf(sBuffer, sizeof(sBuffer), " \1[\4PLAYER\1]\1 %s: \1%s", param1, param2);
         }
-    
-    UTIL_SayTextFilter(filter, sBuffer, pEntity, eMessageType);
+
+	UTIL_SayTextFilter(filter, sBuffer, pEntity, eMessageType);
 
 	char jsonStr[2048];
     snprintf(jsonStr, sizeof(jsonStr), jsonTemplate, param1, param2);

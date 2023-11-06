@@ -151,45 +151,42 @@ GAME_EVENT_F(player_spawn)
 		if(!pZEPlayer)
 		return -1.0f;
 
-		if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM1))
+	if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM1))				//
         {
-            pController->m_szClan("[HELPER]");
-        }
-        else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM2))
+            pController->m_szClan("[HELPER]");     				//
+        } 
+		else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM2))				//
         {
-            pController->m_szClan("[ADMINISTRATOR]");
-        }
-        else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM3))
+            pController->m_szClan("[ADMIN]");     				//
+        } 
+		else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM3))				//
         {
-            pController->m_szClan("[MODERATOR]");
-        }
-        else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM4))
+            pController->m_szClan("[MODERATOR]");     				//
+        } 
+		else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM4))				//
         {
-            pController->m_szClan("[VETERAN]");
-        }
-        else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM5))
+            pController->m_szClan("[YOUTUBER]");     				//
+        } 
+		else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM5))				//
         {
-            pController->m_szClan("[MANAGER]");
-        }
-        else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM6))
+            pController->m_szClan("[MANAGER]");     				//
+        } 
+		else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM6))				//
         {
-            pController->m_szClan("[CO-OWNER]");
-        }
-		else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM7))
+            pController->m_szClan("[CO-FONDATOR]");     				//
+        } 
+		else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM7))				//
         {
-            pController->m_szClan("[TESTER]");
-        }
-		else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM8))
+            pController->m_szClan("[TESTER]");     				//
+        } 
+		else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CUSTOM8))				//
         {
-            pController->m_szClan("[SUPERVIZOR]");
-        }
-        else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CHEATS))
+            pController->m_szClan("[DEVELOPER]");     				//
+        } 
+		else if (pZEPlayer->IsAdminFlagSet(ADMFLAG_CHEATS))				//
         {
-            pController->m_szClan("[OWNER]");
-        }
-        else {
-			pController->m_szClan("[Player]");
-        }	
+            pController->m_szClan("[FONDATOR]");     				//
+        } 
 
 		return -1.0f;
 	});
